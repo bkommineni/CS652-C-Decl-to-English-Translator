@@ -5,10 +5,10 @@ declaration
     ;
 
 typename
-    :   'void'
-    |   'float'
-    |   'int'
-    |	ID
+    :   'void'                  #Void
+    |   'float'                 #Float
+    |   'int'                   #Int
+    |	ID                      #Key
     ;
 
 declarator
@@ -16,7 +16,7 @@ declarator
     |   declarator '(' ')'		# Func
     |	'*' declarator			# Pointer
 	|   '(' declarator ')'		# Grouping
-    |	ID						# Var
+	|   ID                      # Var
     ;
 
 // the following also would work but with less cool trees
