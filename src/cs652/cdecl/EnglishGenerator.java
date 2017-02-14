@@ -1,6 +1,8 @@
 package cs652.cdecl;
 
-
+/**
+ * Class which overrides visitor methods and generates an english string of given input declaration
+ */
 public class EnglishGenerator extends CDeclBaseVisitor<String> {
 
     @Override

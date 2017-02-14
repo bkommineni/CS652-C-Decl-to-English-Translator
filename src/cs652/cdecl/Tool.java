@@ -1,20 +1,18 @@
 package cs652.cdecl;
 
-import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.Trees;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Class which takes user input of C declarations and returns english string of C declaration
+ * @author bhargavi
+ */
 public class Tool {
-
-	public static class CDeclFileLoader extends CDeclBaseListener{
-
-	}
 
 	public static void main(String[] args) {
 
@@ -30,6 +28,11 @@ public class Tool {
 
 	}
 
+	/**
+	 * Method which takes user input of C declaration statements and prints the english string of it
+	 * @param cdeclText input string
+	 * @return english statement of C declaration
+	 */
 	public static String translate(String cdeclText) {
 
 		ANTLRInputStream inputStream = new ANTLRInputStream(cdeclText);
